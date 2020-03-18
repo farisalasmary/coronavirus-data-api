@@ -19,7 +19,7 @@ def get_stats():
     html = res.text
     soup = BeautifulSoup(html, 'html.parser')
     
-    data_table = soup.find("table", {"id": "main_table_countries"})
+    data_table = soup.find("table", {"id": "main_table_countries_today"})
     
     header_cells = data_table.find('thead').find_all('th')
     rows = data_table.find('tbody').find_all('tr')
